@@ -9,17 +9,18 @@ function Canvas(){
 const [image, setImage] =  useState(null)  
 let canvas = useRef()
 let result = useRef()
+const sobel = useSelector(state => state.sobel)
 const kernel = useSelector(state => state.kernel.kernel)
 const divider = useSelector(state => state.kernel.divider)
 const posNeg = useSelector(state => state.kernel.posNeg)
-const name = useSelector(state => state.kernel.name)
-const sobel = useSelector(state => state.sobel)
+let name = useSelector(state => state.kernel.name)
+let screenShot = useSelector(state => state.image)
  
 useEffect(()=>{
     let image = new Image();
-    image.src = picture;
+    image.src =screenShot? screenShot : picture;
     image.onload = ()=> setImage(image);
-}, [])
+}, [screenShot])
 
 useEffect(()=>{
     if(image && canvas && result){
@@ -80,15 +81,17 @@ useEffect(()=>{
                         }
                         
                     }
-                } 
+                }
+              
                 if(sobel.kernelY) {
-                    result = Math.sqrt((resultY * resultY)+(resultX * resultX)
-                ) }                
+                    result = Math.sqrt((resultY * resultY)+(resultX * resultX))
+                    result = result > 30 ? result : 0                   
+               }                
 
-                DestinationPixels[idx] = posNeg*(result/divider)
-                DestinationPixels[idx+1] = posNeg*(result/divider)
-                DestinationPixels[idx+2] = posNeg*(result/divider)
-                DestinationPixels[idx+3]= 256
+                DestinationPixels[idx] = sobel.divider? sobel.posNeg*(result/sobel.divider) : posNeg*(result/divider)
+                DestinationPixels[idx+1] = sobel.posNeg? sobel.posNeg*(result/sobel.divider) : posNeg*(result/divider)
+                DestinationPixels[idx+2] = sobel.divider? sobel.posNeg*(result/sobel.divider) : posNeg*(result/divider)
+                DestinationPixels[idx+3]= 255
             }
         }
             
@@ -100,7 +103,7 @@ useEffect(()=>{
             width={image? image.width : 400} height={image? image.height : 556+80}>original</canvas>
            <canvas ref={result} 
             width={image? image.width : 400} height={image? image.height : 556+80}>{name}</canvas>
-             {name}
+             {!sobel.name? name : sobel.name}
         </div>   
     )
 }

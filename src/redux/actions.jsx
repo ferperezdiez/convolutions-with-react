@@ -1,4 +1,4 @@
-import { ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName";
+import { ADD_IMAGE, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName";
 
 export function changeIndex (index){
     return (dispatch) => {
@@ -23,6 +23,15 @@ export function addSobel (sobel){
         dispatch({
             type: ADD_SOBEL,
             payload: sobel
+        })
+    }
+}
+
+export function addImage (image){
+    return (dispatch) => {
+        dispatch({
+            type: ADD_IMAGE,
+            payload: image
         })
     }
 }

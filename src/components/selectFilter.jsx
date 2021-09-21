@@ -5,19 +5,17 @@ import Sobel from "../Sobel/sobel";
 import { addSobel, changeIndex, changeKernel } from "../redux/actions";
 
 
-
-
-
 export default function SelectFilter(){
     
     const dispatch = useDispatch()
     function clicked(i){        
-        dispatch(changeIndex(i))
         dispatch(addSobel({}))
+        dispatch(changeIndex(i))
         dispatch(changeKernel(Kernels[i]))
     }
-    function clickedSobed(){
-        dispatch(addSobel(Sobel))
+    function clickedSobed(idx){
+        dispatch(changeKernel(Kernels[0]))
+        dispatch(addSobel(Sobel[idx]))
     }
 
 
@@ -26,8 +24,8 @@ export default function SelectFilter(){
         <div> 
             { Kernels?.map((kernel, idx) => <button key={idx} onClick={() => 
                    clicked(idx)}>{kernel.name}</button> )} 
-            <button onClick={() => 
-                   clickedSobed()} >Sobel</button>
+           { Sobel?.map((Sob, idx) => <button onClick={() => 
+                   clickedSobed(idx)} >{Sob.name}</button>)}
         </div> 
     )
 }
