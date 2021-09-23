@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
-import picture from '../images/foto1.jpg';
+import picture from '../../images/foto1.jpg';
+import "./canvas.css";
+
  
 
 
@@ -15,12 +17,16 @@ const divider = useSelector(state => state.kernel.divider)
 const posNeg = useSelector(state => state.kernel.posNeg)
 let name = useSelector(state => state.kernel.name)
 let screenShot = useSelector(state => state.image)
- 
+let file = useSelector(state => state.file)
+
+
+
 useEffect(()=>{
     let image = new Image();
-    image.src =screenShot? screenShot : picture;
+    image.src = screenShot ? screenShot: picture
     image.onload = ()=> setImage(image);
-}, [screenShot])
+
+}, [screenShot, file])
 
 useEffect(()=>{
     if(image && canvas && result){
@@ -99,9 +105,9 @@ useEffect(()=>{
     } 
     return(       
         <div>
-            <canvas ref={canvas} 
+            <canvas ref={canvas} className="canvas"
             width={image? image.width : 400} height={image? image.height : 556+80}>original</canvas>
-           <canvas ref={result} 
+           <canvas ref={result} className="canvas"
             width={image? image.width : 400} height={image? image.height : 556+80}>{name}</canvas>
              {!sobel.name? name : sobel.name}
         </div>   

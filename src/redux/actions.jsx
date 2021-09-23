@@ -1,4 +1,4 @@
-import { ADD_IMAGE, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName";
+import { ADD_FILE, ADD_IMAGE, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL, CHANGE_ONOFF } from "./actionsName";
 
 export function changeIndex (index){
     return (dispatch) => {
@@ -35,3 +35,13 @@ export function addImage (image){
         })
     }
 }
+
+export function addFile (file){
+    return (dispatch) => {
+        dispatch({
+            type: ADD_FILE,
+            payload: file
+        })
+    }
+}
+

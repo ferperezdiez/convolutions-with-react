@@ -1,8 +1,7 @@
-import { ADD_IMAGE, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName"
+import { ADD_FILE, ADD_IMAGE, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName"
 
 const initialState = {
-    index: 0,
-    kernel:{
+     kernel:{
         kernel: [
             [0,0,0],
             [0,1,0],
@@ -13,7 +12,8 @@ const initialState = {
         name: 'original'
     },
     sobel:{},
-    image:null
+    image:null,
+ 
 }
 
 export default function reducer (state=initialState, action){
@@ -40,6 +40,12 @@ export default function reducer (state=initialState, action){
             return {
                 ...state,
                 image: action.payload
+            }
+        }
+        case ADD_FILE: {
+            return {
+                ...state,
+                file: action.payload
             }
         }
         default: {
