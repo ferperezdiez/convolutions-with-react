@@ -20,10 +20,13 @@ export default function SelectFilter(){
 
  
     return ( 
-        <select onChange={(e) => clicked(e.target.value)}>
+        <div>
+            <h5>Seleciona un filtro</h5>
+            <select onChange={(e) => clicked(e.target.value)}>
             { kerSrb?.map((kernel, idx) => {                
                     return <option key={idx} value={idx} >{kernel.name}</option>
             })}
         </select>
+        </div>
     )
 }

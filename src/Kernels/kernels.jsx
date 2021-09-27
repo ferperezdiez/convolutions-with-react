@@ -88,16 +88,6 @@ const Kernels = [
     },
     {
         kernel: [
-            [1,2,1],
-            [2,4,2],
-            [1,2,1],  
-            ],
-        divider: 16,
-        posNeg: 1,
-        name: 'desenfoque gaussiano 3x3' 
-    },
-    {
-        kernel: [
             [0,1,0],
             [1,-10,1],
             [0,1,0],  
@@ -124,7 +114,17 @@ const Kernels = [
             ],
          divider: 1,
         posNeg: 1,
-       name: 'repujado' 
+       name: 'no se el nombre' 
+    },
+    {
+        kernel: [
+            [-1, 0,1],
+            [0, 1, 0],
+            [0, 0, 1]  
+            ],
+         divider: 3,
+        posNeg: 1,
+       name: 'mmm' 
     },
 ];
 

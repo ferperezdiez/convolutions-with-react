@@ -37,7 +37,7 @@ export default function Video(){
                 <Link to="/">
                     <button onClick={screenShot}>ScreenShot</button>
                 </Link> 
-                <img src={image} alt={null}/>
+                <img src={image} alt=""/>
            </div>
            
         </div>

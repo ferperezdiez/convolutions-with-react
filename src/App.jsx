@@ -6,6 +6,7 @@ import Video from "./components/video/video.jsx";
 function App() {
   return (
     <div >
+     
       <Route exact path="/" component={Home}/>
       <Route exact path="/video" component={Video}/>
     </div>

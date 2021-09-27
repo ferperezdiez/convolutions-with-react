@@ -11,7 +11,8 @@ export default function SendResume(){
 
     const sendmail = async (e) =>{
         e.preventDefault()
-            try{ const check = await axios.post('http://localhost:3004', mail)
+            try{ const check = await axios.post('/', mail)
+            console.log(check.data)
             }
             catch(error){
                  console.log(error)
@@ -21,6 +22,7 @@ export default function SendResume(){
 
     return (
         <div>
+            <h5>Ingresa tu email para recibir mi CV</h5>
             <form onSubmit={sendmail}>
                 <input onChange={setmail}/>
                 <button>enviar</button>

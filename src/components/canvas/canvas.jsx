@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux';
 import picture from '../../images/foto1.jpg';
 import "./canvas.css";
 
- 
-
 
 function Canvas(){
 
@@ -35,7 +33,7 @@ useEffect(()=>{
         blackAndWhite(canvas)
         convolutions(canvas, result)
     }
-}, [image, canvas, kernel, blackAndWhite])
+}, [image, canvas, kernel, {blackAndWhite}])
 
     function blackAndWhite(canvas){
         const ctx = canvas.current.getContext("2d");       
@@ -45,9 +43,7 @@ useEffect(()=>{
             let red = pixels[p];
             let green = pixels[p+1];
             let blue = pixels[p+2];
-            //let alpha = pixels[p+3];
             let gray = (red + green + blue)/3
-            
             pixels[p] = gray;
             pixels[p+1] = gray;
             pixels[p+2] = gray;
@@ -85,7 +81,6 @@ useEffect(()=>{
                             resultX += sobel.kernelX[kernelY][kernelX] * (FontPixels[(((y+(kernelY-1)) * 
                                 image.width)+ x+(kernelX-1)) * 4])
                         }
-                        
                     }
                 }
               
@@ -106,10 +101,15 @@ useEffect(()=>{
     return(       
         <div>
             <canvas ref={canvas} className="canvas"
-            width={image? image.width : 400} height={image? image.height : 556+80}>original</canvas>
+            width={image? image.width : 400} height={image? image.height : 556+80}>
+                <h5>original</h5>
+            </canvas>
            <canvas ref={result} className="canvas"
             width={image? image.width : 400} height={image? image.height : 556+80}>{name}</canvas>
-             {!sobel.name? name : sobel.name}
+             <h5>
+                 {!sobel.name? name : sobel.name}
+
+             </h5>
         </div>   
     )
 }
