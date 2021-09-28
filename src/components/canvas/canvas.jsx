@@ -30,8 +30,6 @@ function Canvas(){
         if(image && canvas && result){
             const ctx = canvas.current.getContext("2d");       
             ctx.drawImage(image,0, 0, image.width, image.height);
-            
-           
         }
     }, [image, canvas, kernel])
 
