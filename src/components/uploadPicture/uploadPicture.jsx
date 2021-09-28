@@ -1,7 +1,5 @@
 import React, {  useState } from 'react';
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { addImage } from '../../redux/actions';
 import { Redirect } from 'react-router';
 
