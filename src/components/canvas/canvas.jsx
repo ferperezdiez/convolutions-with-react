@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {  useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import picture from '../../images/foto1.jpg';
 import "./canvas.css";
@@ -6,36 +6,48 @@ import "./canvas.css";
 
 function Canvas(){
 
-const [image, setImage] =  useState(null)  
-let canvas = useRef()
-let result = useRef()
-const sobel = useSelector(state => state.sobel)
-const kernel = useSelector(state => state.kernel.kernel)
-const divider = useSelector(state => state.kernel.divider)
-const posNeg = useSelector(state => state.kernel.posNeg)
-let name = useSelector(state => state.kernel.name)
-let screenShot = useSelector(state => state.image)
-let file = useSelector(state => state.file)
+    const [image, setImage] =  useState(null)  
+    let canvas = useRef()
+    let result = useRef()
+    const sobel = useSelector(state => state.sobel)
+    const kernel = useSelector(state => state.kernel.kernel)
+    const divider = useSelector(state => state.kernel.divider)
+    const posNeg = useSelector(state => state.kernel.posNeg)
+    let name = useSelector(state => state.kernel.name)
+    let screenShot = useSelector(state => state.image)
+    let file = useSelector(state => state.file)
 
 
 
-useEffect(()=>{
-    let image = new Image();
-    image.src = screenShot ? screenShot: picture
-    image.onload = ()=> setImage(image);
+    useEffect(()=>{
+        let image = new Image();
+        image.src = screenShot ? screenShot: picture
+        image.onload = ()=> setImage(image);
 
-}, [screenShot, file])
+    }, [screenShot, file])
 
-useEffect(()=>{
-    if(image && canvas && result){
-        const ctx = canvas.current.getContext("2d");       
-        ctx.drawImage(image,0, 0, image.width, image.height);
-        blackAndWhite(canvas)
-        convolutions(canvas, result)
-    }
-}, [image, canvas, kernel, {blackAndWhite}])
+    useEffect(()=>{
+        if(image && canvas && result){
+            const ctx = canvas.current.getContext("2d");       
+            ctx.drawImage(image,0, 0, image.width, image.height);
+            
+           
+        }
+    }, [image, canvas, kernel])
 
-    function blackAndWhite(canvas){
+    useEffect(()=>{
+        if(image && canvas && result){
+            blackAndWhite(canvas)
+        }
+    })
+
+    useEffect(()=>{
+        if(image && canvas && result){
+            convolutions(canvas, result)
+        }
+    })
+
+    const  blackAndWhite = (canvas) => {
         const ctx = canvas.current.getContext("2d");       
         let imageData = ctx.getImageData(0, 0, image.width, image.height);
         let pixels = imageData.data;
@@ -53,7 +65,7 @@ useEffect(()=>{
 
     
     
-    function convolutions(canvasFont, canvasDestination){
+    const convolutions = (canvasFont, canvasDestination) => {
         let ctxFont = canvasFont.current.getContext("2d");
         let ImageDataFont = ctxFont.getImageData(0, 0, image.width, image.height)
         let FontPixels = ImageDataFont.data       
