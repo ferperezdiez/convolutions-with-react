@@ -13,6 +13,7 @@ export default function SendResume(){
         e.preventDefault()
             try{ const check = await axios.post('/', mail)
             console.log(check.data)
+            window.location.href = "/"
             }
             catch(error){
                  console.log(error)

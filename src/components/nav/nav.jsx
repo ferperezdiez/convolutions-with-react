@@ -8,12 +8,15 @@ export default function Nav(){
     return (
         <div>
             <SelectFilter/>
-            <UploadPic/>
-            <SendResume/>
+            <Link to="/upload">
+                <button>Try with another image</button>
+            </Link>
+            <Link to="/resume">
+                <button>Get my resume</button>
+            </Link>
             <div>
-                <h5>prueba los filtros con una selfie</h5>
                 <Link to="/video">
-                <button>Take a selfie</button>
+                <button>Try with a selfie</button>
                 </Link>
             </div>
         </div>

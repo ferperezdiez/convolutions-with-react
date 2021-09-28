@@ -21,7 +21,7 @@ export default function SelectFilter(){
  
     return ( 
         <div>
-            <h5>Seleciona un filtro</h5>
+            <p>Seleciona un filtro</p>
             <select onChange={(e) => clicked(e.target.value)}>
             { kerSrb?.map((kernel, idx) => {                
                     return <option key={idx} value={idx} >{kernel.name}</option>
