@@ -5,13 +5,16 @@ import SelectFilter from '../selectFilter/selectFilter';
 import './nav.css'
 
 export default function Nav(){
+
+    var width = window.innerWidth
+  
     return (
         
         <Navbar bg="light" expand="lg" >
                 <Container className="d-inline-flex p-2 bd-highlight">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse >
-                            <div className="row container-fluid">
+                            <div className={width > 850 ?"row container-fluid" : "block"}>
                                 <Col className="md-4">
                                     <SelectFilter />
                                 </Col>
