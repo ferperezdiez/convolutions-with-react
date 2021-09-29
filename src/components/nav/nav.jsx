@@ -15,15 +15,15 @@ export default function Nav(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse >
                             <div className={width > 850 ?"row container-fluid" : "block"}>
-                                <Col className="md-4">
+                                <Col className="col md-4">
                                     <SelectFilter />
                                 </Col>
-                                <Col className="md-4">
+                                <Col className="col md-4">
                                     <Link to="/upload" className="link">
                                         <Button >Try with another image</Button>
                                     </Link>
                                 </Col>
-                                <Col className="md-4">
+                                <Col className="col md-4">
                                     <Link to="/resume">
                                         <Button >Get my resume</Button>
                                     </Link>

@@ -1,6 +1,7 @@
 .canvas{
     width:50%;
     height: 50%;
+
 }
 
 @media (max-width: 850px) {
@@ -9,3 +10,4 @@
         height: 100%;
     }
 }
+
