@@ -1,4 +1,4 @@
-import { Button, Container, Navbar } from 'react-bootstrap';
+import { Button, Col, Container, Navbar } from 'react-bootstrap';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SelectFilter from '../selectFilter/selectFilter';
@@ -8,24 +8,29 @@ export default function Nav(){
     return (
         
         <Navbar bg="light" expand="lg" >
-         
-                <Container>
+                <Container className="d-inline-flex p-2 bd-highlight">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse >
-                            <div className="container justify-content">
-                       
-                            <SelectFilter />
-                            <Link to="/upload" className="link">
-                                <Button >Try with another image</Button>
-                            </Link>
-                            <Link to="/resume">
-                                <Button >Get my resume</Button>
-                            </Link>
-                                <Link to="/video">
-                                    <Button >Try with a selfie</Button>
-                                </Link>
-                     
-                                </div>
+                            <div className="row container-fluid">
+                                <Col className="md-4">
+                                    <SelectFilter />
+                                </Col>
+                                <Col className="md-4">
+                                    <Link to="/upload" className="link">
+                                        <Button >Try with another image</Button>
+                                    </Link>
+                                </Col>
+                                <Col className="md-4">
+                                    <Link to="/resume">
+                                        <Button >Get my resume</Button>
+                                    </Link>
+                                </Col >
+                                <Col className="md-4">
+                                    <Link to="/video">
+                                        <Button >Try with a selfie</Button>
+                                    </Link>
+                                </Col>
+                            </div>
               
                 </Navbar.Collapse>
             </Container>
