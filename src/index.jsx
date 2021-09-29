@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 import axios from 'axios'
 import store from './redux/store.jsx';
 import dotenv from 'dotenv';
+import 'bootstrap/dist/css/bootstrap.min.css';
 dotenv.config()
-
 axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3004'
 
 

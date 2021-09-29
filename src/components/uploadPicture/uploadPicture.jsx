@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addImage } from '../../redux/actions';
 import { Redirect } from 'react-router';
 
+
 export default function UploadPic(){
     const image = useSelector(state => state.image)
     const dispatch = useDispatch()
