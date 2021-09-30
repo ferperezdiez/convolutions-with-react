@@ -116,10 +116,11 @@ function Canvas(){
             </canvas>
            <canvas ref={result} className="canvas"
             width={image? image.width : 400} height={image? image.height : 556+80}>{name}</canvas>
-             <h5>
-                 {!sobel.name? name : sobel.name}
-
-             </h5>
+             <div className="h5Div">
+                <h5 className="h5Canvas">
+                    {!sobel.name? name : sobel.name}
+                </h5>
+             </div>
         </div>   
     )
 }

@@ -1,13 +1,24 @@
+
 .canvas{
     width:50%;
     height: 50%;
 
-}
+}    
 
 @media (max-width: 850px) {
     .canvas{
         width: 100%;
         height: 100%;
-    }
+    }    
+}    
+
+.h5Div{
+    display: flex;
+    justify-content: center;
+}
+
+.h5Canvas{
+color: #0D6EFD;
+margin:0.5rem;
 }
 
