@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Webcam from "react-webcam";
@@ -9,7 +9,7 @@ import './video.css'
 
 export default function Video(){
     //const [onOff, setOnOff] = useState(true)
-    const [image, setImage] = useState(null)
+    
     const webRef = useRef()
     const dispatch = useDispatch()
 
@@ -19,7 +19,7 @@ export default function Video(){
 
     const screenShot = () => {
         let img = webRef.current.getScreenshot()
-        setImage(img)
+        
         dispatch(addFile(null))
         dispatch(addImage(img))
         //setOnOff(false)
