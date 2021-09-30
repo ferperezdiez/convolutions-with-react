@@ -1,0 +1,15 @@
+.uploadContainer{
+    display: flex;
+   justify-content: center;
+   
+}
+
+.formStyles{
+    width: 50%;
+    position: relative;
+    top: 13rem;
+}
+
+.margin{
+    margin-top: 1rem;
+}

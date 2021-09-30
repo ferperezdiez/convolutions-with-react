@@ -2,6 +2,7 @@ import React, {  useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addImage } from '../../redux/actions';
 import { Redirect } from 'react-router';
+import './upLoadPicture.css';
 
 
 export default function UploadPic(){
@@ -29,12 +30,14 @@ export default function UploadPic(){
     }
     else {
         return (
-        <div>
-            <h5>Prueba los filtros con una imagen</h5>
-            <form encType="multipart/form-data" onSubmit={(e) => upload(e)}>
-                <input type="file" onChange={selectFile} /> 
-                <button>enviar</button>    
-            </form>
-        </div>
+            <div className="uploadContainer">
+                <div className="formStyles">
+                    <h5 className="margin">Prueba los filtros con una imagen</h5>
+                    <form encType="multipart/form-data" onSubmit={(e) => upload(e)}>
+                        <input className="form-control margin" id="formFileMultiple" type="file" onChange={selectFile} /> 
+                        <button className="btn btn-primary margin">enviar</button>    
+                    </form>
+                </div>
+            </div>
     )}
 }

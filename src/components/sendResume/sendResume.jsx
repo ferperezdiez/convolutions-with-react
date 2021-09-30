@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import './sendResume.css'
 
 
 export default function SendResume(){
@@ -22,12 +23,14 @@ export default function SendResume(){
     }
 
     return (
-        <div>
-            <h5>Ingresa tu email para recibir mi CV</h5>
-            <form onSubmit={sendmail}>
-                <input onChange={setmail}/>
-                <button>enviar</button>
-            </form>
+        <div className="senmMailContainer">
+            <div className="divInput">
+                <h5>Ingresa tu email para recibir mi CV</h5>
+                <form className="input-group mb-3" onSubmit={sendmail}>
+                    <input className="form-control" onChange={setmail}/>
+                    <button className="btn btn-primary">enviar</button>
+                </form>
+            </div>
         </div>
-    )
+        )
 }

@@ -1,0 +1,20 @@
+.videoContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.video{
+    position: absolute;
+    top: 5rem;
+    border: solid 5px #0D6EFD;
+    border-radius: 15%;
+    
+}
+
+.buttonVideo{
+    display: inline;
+    justify-self: center;
+    margin-top: 1rem;
+}

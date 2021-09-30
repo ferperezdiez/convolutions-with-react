@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Webcam from "react-webcam";
 import { addFile, addImage } from "../../redux/actions";
+import './video.css'
 
 
 
@@ -29,17 +30,19 @@ export default function Video(){
     // }
    
     return(
-        <div>
-            {/* <button onClick={turn}>{onOff ? 'Off' : 'On'}</button> */}
-           
-           <div>
-               <Webcam ref={webRef} videoConstraints={videoConstraints}/>
-                <Link to="/">
-                    <button onClick={screenShot}>ScreenShot</button>
+       <div >
+           <div className="videoContainer">
+               <Webcam className="img-fluid video" ref={webRef} videoConstraints={videoConstraints}/>
+                <Link className="buttonVideo" to="/">
+                    <button className="btn btn-primary " onClick={screenShot}>ScreenShot</button>
                 </Link> 
-                <img src={image} alt=""/>
+                
            </div>
-           
-        </div>
+           <div className="buttonVideo" >
+
+           </div>
+
+       </div>
+        
     )
 }

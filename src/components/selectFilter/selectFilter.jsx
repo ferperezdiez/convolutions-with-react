@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Kernels from "../../Kernels/kernels";
 import Sobel from "../../Sobel/sobel";
 import { addSobel, changeIndex, changeKernel } from "../../redux/actions";
-import { Col, NavDropdown, NavItem, NavLink } from "react-bootstrap";
+import { NavDropdown, NavItem, NavLink } from "react-bootstrap";
 
 
 export default function SelectFilter(){
@@ -19,13 +19,13 @@ export default function SelectFilter(){
     }
 
     return ( 
-        <Col className="md-4">
+      
             <NavDropdown onSelect={clicked} title="Select a filter" id="basic-nav-dropdown">           
                 { kerSrb?.map((kernel, idx) => {   
                 return  <NavItem key={idx} >
                             <NavLink eventKey={idx} title={kernel.name}>{kernel.name}</NavLink>
                         </NavItem> })}            
                 </NavDropdown>
-        </Col>
+      
     )
 }

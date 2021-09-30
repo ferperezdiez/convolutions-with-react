@@ -3,13 +3,13 @@
 }
 
 
+.col{
+    margin-top: 1rem;
+}
 
+.block{
+    display: block;
+}
 @media (max-width: 850px) {
-    .block{
-        display: block;
-    }
-    .col{
-        margin-top: 1rem;
-    }
 }
 
