@@ -8,8 +8,37 @@
     width: 50%;
     position: relative;
     top: 13rem;
+    margin:5%
 }
 
 .margin{
     margin-top: 1rem;
+}
+
+@media(max-width:850px){
+    .uploadContainer{
+        display: flex;
+       justify-content: center;
+       width: 90%;
+       margin-right: 5%;
+    }
+    .formStyles{
+        width: 100%;
+        position: relative;
+        top: 13rem;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+    }
+      .upLoadForm{
+        display: flex;
+        align-content: center;
+      }
+   
+    .upLoadButton{
+        padding-right: 25%;
+    }
+    .upLoadH5{
+        width: 100%;
+    }
 }
