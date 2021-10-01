@@ -8,13 +8,21 @@
     margin-top: 20%;
 }
 
-@media screen and (max-width:850px){
-    divInput{
-        margin-top: 2rem;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media(max-width:850px){
+    .divInput{
+        
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:3%;
+        margin-top: 70%;
+    }
+    h5{
+        width: 94%;
+        margin-left:3%;
+     
+        
     }
 }
 
