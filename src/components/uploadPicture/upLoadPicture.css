@@ -1,44 +1,47 @@
-.uploadContainer{
-    display: flex;
-   justify-content: center;
-   
-}
-
 .formStyles{
     width: 50%;
     position: relative;
     top: 13rem;
-    margin:5%
+    margin:0 auto 0;
+    
+    padding: 1rem;
+    
 }
-
+.upLoadForm{
+    display: flex;
+}
 .margin{
     margin-top: 1rem;
 }
+.upLoadH5{
+   
+   margin-left: 27%;
+}
+.upLoadButton{
+   
+   margin-left: 45%;
+}
+
+
 
 @media(max-width:850px){
-    .uploadContainer{
-        display: flex;
-       justify-content: center;
-       width: 90%;
-       margin-right: 5%;
-    }
+    
     .formStyles{
         width: 100%;
-        position: relative;
-        top: 13rem;
+        
         display: flex;
         flex-direction: column;
        align-items: center;
     }
       .upLoadForm{
-        display: flex;
-        align-content: center;
+        display: flex
       }
    
     .upLoadButton{
-        padding-right: 25%;
+        margin-left: 38%;
+      
     }
     .upLoadH5{
-        width: 100%;
+        margin: 0 auto 0;
     }
 }
