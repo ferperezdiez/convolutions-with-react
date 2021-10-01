@@ -26,7 +26,7 @@ export default function SendResume(){
         <div className="senmMailContainer">
             <div className="divInput">
                 <h5>Ingresa tu email para recibir mi CV</h5>
-                <form className="input-group mb-3" onSubmit={sendmail}>
+                <form className="input-group mb-3 form" onSubmit={sendmail}>
                     <input className="form-control" onChange={setmail}/>
                     <button className="btn btn-primary">enviar</button>
                 </form>
