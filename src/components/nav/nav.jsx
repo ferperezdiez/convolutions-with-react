@@ -33,6 +33,11 @@ export default function Nav(){
                                         <Button >Try with a selfie</Button>
                                     </Link>
                                 </Col>
+                                <Col className="md-4">
+                                    <Link to="/repository">
+                                        <Button>Repository</Button>
+                                    </Link>
+                                </Col>
                             </div>
               
                 </Navbar.Collapse>

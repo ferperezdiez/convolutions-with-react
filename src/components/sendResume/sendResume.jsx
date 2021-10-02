@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'
 import './sendResume.css'
+import { Link } from 'react-router-dom';
 
 
 export default function SendResume(){
@@ -30,6 +31,9 @@ export default function SendResume(){
                     <input className="form-control" onChange={setmail}/>
                     <button className="btn btn-primary">enviar</button>
                 </form>
+                    <Link to='/'>
+                        <button className="btn btn-primary">volver</button>
+                    </Link>
             </div>
         </div>
         )

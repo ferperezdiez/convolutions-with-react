@@ -32,15 +32,17 @@ export default function Video(){
     return(
        <div >
            <div className="videoContainer">
-               <Webcam className="img-fluid video" ref={webRef} videoConstraints={videoConstraints}/>
+               <Webcam className="img-fluid video" ref={webRef} 
+                    videoConstraints={videoConstraints}/>
                 <Link className="buttonVideo" to="/">
                     <button className="btn btn-primary " onClick={screenShot}>ScreenShot</button>
                 </Link> 
-                
            </div>
-           <div className="buttonVideo" >
-
-           </div>
+           <div className="videoContainer">
+                <Link to="/"className="buttonVideo2">
+                        <button className="btn btn-primary ">volver</button>
+                </Link>                
+            </div>
 
        </div>
         

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addImage } from '../../redux/actions';
 import { Redirect } from 'react-router';
 import './upLoadPicture.css';
+import { Link } from 'react-router-dom';
 
 
 export default function UploadPic(){
@@ -37,6 +38,9 @@ export default function UploadPic(){
                         <input className="form-control margin" id="formFileMultiple" type="file" onChange={selectFile} /> 
                         <button className="upLoadButton btn btn-primary margin ">enviar</button>    
                     </form>
+                    <Link to="/">
+                    <button className="upLoadButton btn btn-primary margin ">volver</button> 
+                    </Link>
                 </div>
           
     )}

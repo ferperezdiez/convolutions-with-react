@@ -18,3 +18,17 @@
     justify-self: center;
     margin-top: 1rem;
 }
+
+.buttonVideo2{
+   display: inline;
+   justify-self:end;
+   margin-top: 1rem;
+   position: absolute;
+   bottom: 5%;
+}
+
+@media(max-width:850px){
+    .buttonVideo2{
+        bottom: 45%;
+    } 
+}
