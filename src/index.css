@@ -2,9 +2,5 @@
     text-transform: uppercase !important;
     font-size: 1.0rem !important;
     font-weight: bold !important;
-    
 }
 
-.row{
-    padding-left: calc(var(--bs-gutter-x)*0.0) !important;
-}

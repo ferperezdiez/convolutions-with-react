@@ -14,11 +14,13 @@ export default function Nav(){
                 <Container className="d-inline-flex p-2 bd-highlight">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse >
-                            <div className={width > 850 ?" row container-fluid" : "block"}>
-                                <Col className="col">
+                            <div className={width > 850 ?"row container-fluid" : "block"}>
+                                <Col className="col md-4">
                                     <SelectFilter />
                                 </Col>
-                                <Col className="col ">
+                            <div className={width > 850 ?"row container-fluid" : "block"}>
+                            </div>
+                                <Col className="col md-4">
                                     <Link to="/upload" className="link">
                                         <Button >Try with another image</Button>
                                     </Link>
