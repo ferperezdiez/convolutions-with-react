@@ -39,7 +39,7 @@ export default function Repository(){
                 className="btn btn-primary btn-lg repoButton">repository</a>
         </div>
         <div className="repositoryContainer">
-            <label className="form-label blockquote text-center" >Si tienes alguna sugerencia sobre el código y quieres compartila 
+            <label className="form-label repositoryLabel blockquote text-center" >Si tienes alguna sugerencia sobre el código y quieres compartila 
                 conmigo, te agradeceré mucho si me lo comentas aquí abajo, ya que me ayuda
                 a mejorar!
             </label>
