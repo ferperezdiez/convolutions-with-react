@@ -17,6 +17,11 @@
    
    margin-left: 27%;
 }
+
+.upLoadButton2{
+    margin-left: 45%;
+}
+
 .upLoadButton{
    
    margin-left: 45%;
@@ -43,5 +48,11 @@
     }
     .upLoadH5{
         margin: 0 auto 0;
+    }
+
+    .upLoadButton2{
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding: 0;
     }
 }

@@ -39,7 +39,7 @@ export default function UploadPic(){
                         <button className="upLoadButton btn btn-primary margin ">enviar</button>    
                     </form>
                     <Link to="/">
-                    <button className="upLoadButton btn btn-primary margin ">volver</button> 
+                    <button className="upLoadButton2 btn btn-primary margin ">volver</button> 
                     </Link>
                 </div>
           
