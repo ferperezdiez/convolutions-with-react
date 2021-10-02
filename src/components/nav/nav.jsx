@@ -14,7 +14,7 @@ export default function Nav(){
                 <Container className="d-inline-flex p-2 bd-highlight">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse >
-                            <div className={width > 850 ?"row container-fluid" : "block"}>
+                            <div className={width > 850 ?"divSelect row container-fluid" : "block"}>
                                 <Col className="col md-4">
                                     <SelectFilter />
                                 </Col>
