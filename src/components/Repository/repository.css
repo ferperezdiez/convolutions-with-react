@@ -1,0 +1,39 @@
+.repositoryContainer{
+    width: 60%;
+    margin:0 auto 0;
+   
+}
+
+.repositoryLink{   
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    
+  
+    display: flex;
+    justify-content: center;
+
+}
+
+.repoButton{
+    margin: 0 auto 0;
+}
+
+.margin{
+    margin-top: 2rem;
+}
+
+.justify{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.repositoryLink2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+  
+    display: flex;
+    justify-content: center;
+}

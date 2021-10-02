@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './repository.css'
 
 export default function Repository(){
 
@@ -32,25 +33,29 @@ export default function Repository(){
 
 
     return(
-        <div>
-            <div>
-                <a href="https://github.com/ferperezdiez/convolutions-with-react" 
-                    className="btn btn-primary">repository</a>
-            </div>
-            <label>Si tienes alguna sugerencia sobre el código y quuieres compartilo 
+        <>
+        <div className="repositoryLink">
+            <a href="https://github.com/ferperezdiez/convolutions-with-react" 
+                className="btn btn-primary btn-lg repoButton">repository</a>
+        </div>
+        <div className="repositoryContainer">
+            <label className="form-label blockquote text-center" >Si tienes alguna sugerencia sobre el código y quuieres compartilo 
                 conmigo te agradeceré mucho si me lo comentas aquí abajo, ya que me ayuda
                 a mejorar!
             </label>
-            <div>
-                <form className="formRepo" onSubmit={onSubmit}>
-                    <input name="mail" value={suggestion.mail} onChange={onChange}  type="text" />
-                    <textarea name="text" value={suggestion.text} onChange={onChange}/>
-                    <button>send</button>
+                <form className="mb-3 justify" onSubmit={onSubmit}>
+                    <label className="form-label margin">Puedes ingresar tu correo aquí(opcional)</label>
+                    <input className="form-control" name="mail" value={suggestion.mail}
+                         onChange={onChange}  type="text" />
+                    <label className="form-label margin">Puedes ingresar tu comentario aquí</label>      
+                    <textarea className="form-control" name="text" value={suggestion.text}
+                         onChange={onChange}/>
+                    <button className="btn btn-secondary">send</button>
                 </form>
-            </div>
-            <Link to='/'>
-                <buttom className="btn btn-primary" >volver</buttom>
-            </Link>
         </div>
+            <Link to='/' className="repositoryLink2">
+                <buttom className="btn btn-primary margin" >volver</buttom>
+            </Link>
+        </>
     )
 }
