@@ -50,7 +50,7 @@ export default function Repository(){
                     <label className="form-label margin">Puedes ingresar tu comentario aquí</label>      
                     <textarea className="form-control" name="text" value={suggestion.text}
                          onChange={onChange}/>
-                    <button className="btn btn-secondary">send</button>
+                    <button className="btn btn-secondary reposirySend">send</button>
                 </form>
         </div>
             <Link to='/' className="repositoryLink2">
