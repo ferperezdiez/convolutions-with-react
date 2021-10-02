@@ -1,58 +1,45 @@
 .formStyles{
-    width: 50%;
-    position: relative;
-    top: 13rem;
-    margin:0 auto 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8rem;
+   
     
-    padding: 1rem;
+ 
     
 }
 .upLoadForm{
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+   
 }
-.margin{
+
+
+.margin2{
     margin-top: 1rem;
 }
-.upLoadH5{
-   
-   margin-left: 27%;
+
+
+.uploadLink{
+display: flex;
+
+justify-content: center;
 }
 
-.upLoadButton2{
-    margin-left: 45%;
+.uploadForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+
 
 .upLoadButton{
+    width: fit-content
    
-   margin-left: 45%;
 }
 
 
-
-@media(max-width:850px){
-    
-    .formStyles{
-        width: 100%;
-        
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-    }
-      .upLoadForm{
-        display: flex
-      }
-   
-    .upLoadButton{
-        margin-left: 38%;
-      
-    }
-    .upLoadH5{
-        margin: 0 auto 0;
-    }
-
-    .upLoadButton2{
-        margin-left: 0% !important;
-        margin-right: 0% !important;
-        
-    }
-}

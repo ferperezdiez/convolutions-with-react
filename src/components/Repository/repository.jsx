@@ -39,8 +39,8 @@ export default function Repository(){
                 className="btn btn-primary btn-lg repoButton">repository</a>
         </div>
         <div className="repositoryContainer">
-            <label className="form-label blockquote text-center" >Si tienes alguna sugerencia sobre el código y quuieres compartilo 
-                conmigo te agradeceré mucho si me lo comentas aquí abajo, ya que me ayuda
+            <label className="form-label blockquote text-center" >Si tienes alguna sugerencia sobre el código y quieres compartila 
+                conmigo, te agradeceré mucho si me lo comentas aquí abajo, ya que me ayuda
                 a mejorar!
             </label>
                 <form className="mb-3 justify" onSubmit={onSubmit}>

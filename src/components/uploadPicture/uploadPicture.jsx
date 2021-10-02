@@ -31,17 +31,20 @@ export default function UploadPic(){
     }
     else {
         return (
-            
+            <>
                 <div className="formStyles">
                     <h5 className="margin upLoadH5">Prueba los filtros con una imagen</h5>
-                    <form encType="upLoadForm multipart/form-data" onSubmit={(e) => upload(e)}>
+                    <form encType="upLoadForm multipart/form-data" className="uploadForm"
+                        onSubmit={(e) => upload(e)}>
                         <input className="form-control margin" id="formFileMultiple" type="file" onChange={selectFile} /> 
-                        <button className="upLoadButton btn btn-primary margin ">enviar</button>    
+                        <button className="upLoadButton btn btn-primary margin">enviar</button>    
                     </form>
-                    <Link to="/">
-                    <button className="upLoadButton2 btn btn-primary margin ">volver</button> 
+                </div>
+                <div className="uploadLink">
+                     <Link to="/" >
+                    <button className=" btn btn-primary margin2">volver</button> 
                     </Link>
                 </div>
-          
+          </>
     )}
 }
