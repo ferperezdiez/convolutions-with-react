@@ -109,12 +109,12 @@ function Canvas(){
         ctxDestination.putImageData(ImageDataDestination, 0, 0)        
     } 
     return(       
-        <div>
-            <canvas ref={canvas} className="canvas"
+        <div className="canvasDiv">
+            <canvas ref={canvas} className="canvas canvas1"
             width={image? image.width : 400} height={image? image.height : 556+80}>
                 <h5>original</h5>
             </canvas>
-           <canvas ref={result} className="canvas"
+           <canvas ref={result} className="canvas canvas2"
             width={image? image.width : 400} height={image? image.height : 556+80}>{name}</canvas>
              <div className="h5Div">
                 <h5 className="h5Canvas">
