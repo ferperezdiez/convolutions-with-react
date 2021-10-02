@@ -23,11 +23,6 @@ export default function Nav(){
                                         <Button >Try with another image</Button>
                                     </Link>
                                 </Col>
-                                <Col className="col md-4">
-                                    <Link to="/resume">
-                                        <Button >Get my resume</Button>
-                                    </Link>
-                                </Col >
                                 <Col className="md-4">
                                     <Link to="/video">
                                         <Button >Try with a selfie</Button>
@@ -38,6 +33,11 @@ export default function Nav(){
                                         <Button>Repository</Button>
                                     </Link>
                                 </Col>
+                                <Col className="col md-4">
+                                    <Link to="/resume">
+                                        <Button >Get my resume</Button>
+                                    </Link>
+                                </Col >
                             </div>
               
                 </Navbar.Collapse>
