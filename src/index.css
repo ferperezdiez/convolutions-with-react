@@ -1,6 +1,10 @@
 .btn{
-
     text-transform: uppercase !important;
     font-size: 1.0rem !important;
     font-weight: bold !important;
+    background-color: rgb(134, 108, 108) !important;
+}
+
+.row{
+    --bs-guttr-x:0.5rem !important;
 }
