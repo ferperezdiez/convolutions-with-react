@@ -44,7 +44,7 @@ export default function Repository(){
                 a mejorar!
             </label>
                 <form className="mb-3 justify" onSubmit={onSubmit}>
-                    <label className="form-label margin">Puedes ingresar tu correo aquí(opcional)</label>
+                    <label className="form-label labelFormRepo margin">Puedes ingresar tu correo aquí(opcional)</label>
                     <input className="form-control" name="mail" value={suggestion.mail}
                          onChange={onChange}  type="text" />
                     <label className="form-label margin">Puedes ingresar tu comentario aquí</label>      
