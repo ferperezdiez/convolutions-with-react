@@ -19,7 +19,7 @@ export default function Nav(){
                                     <SelectFilter />
                                 </Col>
                             </div>
-                            <div className={width > 850 ?"row container-fluid" : "block"}>
+                            <div className={width > 850 ?"divLnks row container-fluid" : "block"}>
                                 <Col className="col md-4">
                                     <Link to="/upload" className="link">
                                         <Button >Try with another image</Button>
