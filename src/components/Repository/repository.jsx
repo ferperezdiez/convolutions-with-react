@@ -54,7 +54,7 @@ export default function Repository(){
                 </form>
         </div>
             <Link to='/' className="repositoryLink2">
-                <buttom className="btn btn-primary margin" >volver</buttom>
+                <buttom className="btn btn-primary repoBack margin" >volver</buttom>
             </Link>
         </>
     )
