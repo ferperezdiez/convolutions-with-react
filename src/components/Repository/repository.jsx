@@ -47,7 +47,7 @@ export default function Repository(){
                     <label className="form-label labelFormRepo margin">Puedes ingresar tu correo aquí(opcional)</label>
                     <input className="form-control" name="mail" value={suggestion.mail}
                          onChange={onChange}  type="text" />
-                    <label className="form-label margin">Puedes ingresar tu comentario aquí</label>      
+                    <label className="form-label labelFormRepo margin">Puedes ingresar tu comentario aquí</label>      
                     <textarea className="form-control" name="text" value={suggestion.text}
                          onChange={onChange}/>
                     <button className="btn btn-secondary reposirySend">send</button>
