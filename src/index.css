@@ -4,5 +4,8 @@
     font-weight: bold !important;
 }
 
-
+.col{
+    text-align: center;
+    width: 90px;
+}
 

@@ -43,3 +43,7 @@ justify-content: center;
 }
 
 
+.col{
+    text-align: center !important;
+    width: 90px !important;
+}
