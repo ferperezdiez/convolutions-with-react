@@ -1,4 +1,4 @@
-import { Button, Col, Container, Navbar } from 'react-bootstrap';
+import { Button, Container, Navbar } from 'react-bootstrap';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SelectFilter from '../selectFilter/selectFilter';
@@ -15,31 +15,31 @@ export default function Nav(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse >
                             <div className={width > 850 ?"divSelect row container-fluid" : "block"}>
-                                <Col className="col md-4">
+                                <div className="col">
                                     <SelectFilter />
-                                </Col>
+                                </div>
                             </div>
                             <div className={width > 850 ?"divLnks row container-fluid" : "block"}>
-                                <Col className="col md-4">
+                                <div className="col">
                                     <Link to="/upload" className="link">
                                         <Button >Try with another image</Button>
                                     </Link>
-                                </Col>
-                                <Col className="md-4">
+                                </div>
+                                <div className="col ">
                                     <Link to="/video">
                                         <Button >Try with a selfie</Button>
                                     </Link>
-                                </Col>
-                                <Col className="md-4">
+                                </div>
+                                <div className="col">
                                     <Link to="/repository">
                                         <Button>Repository</Button>
                                     </Link>
-                                </Col>
-                                <Col className="col md-4">
+                                </div>
+                                <div className="col">
                                     <Link to="/resume">
                                         <Button >Get my resume</Button>
                                     </Link>
-                                </Col >
+                                </div >
                             </div>
               
                 </Navbar.Collapse>
