@@ -22,22 +22,22 @@ export default function Nav(){
                             <div className={width > 850 ?"divLnks row container-fluid" : "block"}>
                                 <div className="col">
                                     <Link to="/upload" className="link">
-                                        <Button >Try with another image</Button>
+                                        <button className="btn btn-primary" >Try with another image</button>
                                     </Link>
                                 </div>
                                 <div className="col ">
                                     <Link to="/video">
-                                        <Button >Try with a selfie</Button>
+                                        <button className="btn btn-primary">Try with a selfie</button>
                                     </Link>
                                 </div>
                                 <div className="col">
                                     <Link to="/repository">
-                                        <Button>Repository</Button>
+                                        <button className="btn btn-primary">Repository</button>
                                     </Link>
                                 </div>
                                 <div className="col">
                                     <Link to="/resume">
-                                        <Button >Get my resume</Button>
+                                        <button className="btn btn-primary">Get my resume</button>
                                     </Link>
                                 </div >
                             </div>

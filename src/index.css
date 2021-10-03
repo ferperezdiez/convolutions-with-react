@@ -2,8 +2,11 @@
     text-transform: uppercase !important;
     font-size: 0.9rem !important;
     font-weight: bold !important;
-    width: 110% !important;
+
 }
 
+.btn-primary{
+    width: 110% !important;
+}
 
 
