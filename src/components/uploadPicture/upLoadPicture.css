@@ -4,9 +4,9 @@
     align-items: center;
     flex-direction: column;
     margin-top: 8rem;
-   
     
- 
+    
+    
     
 }
 .upLoadForm{
@@ -24,9 +24,9 @@
 
 
 .uploadLink{
-display: flex;
+    display: flex;
 
-justify-content: center;
+    justify-content: center;
 }
 
 .uploadForm{
@@ -41,7 +41,6 @@ justify-content: center;
     width: fit-content
    
 }
-
 
 .col{
     text-align: center !important;

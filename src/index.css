@@ -2,10 +2,8 @@
     text-transform: uppercase !important;
     font-size: 0.9rem !important;
     font-weight: bold !important;
+    width: 110% !important;
 }
 
-.col{
-    text-align: center;
-    width: 90px;
-}
+
 
