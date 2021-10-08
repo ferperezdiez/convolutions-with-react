@@ -11,6 +11,9 @@
     display: block;
 }
 @media (max-width: 850px) {
+    .btn{
+        width: 100vw;
+    }
 }
 
 .repositoryNav{
