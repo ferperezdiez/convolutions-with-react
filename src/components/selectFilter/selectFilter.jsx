@@ -21,7 +21,7 @@ export default function SelectFilter(){
 
     return ( 
       
-            <NavDropdown className="btn btn-success"  onSelect={clicked} title="Select a filter" id="basic-nav-dropdown">           
+            <NavDropdown className="btn btn-success btn-nav"  onSelect={clicked} title="Select a filter" id="basic-nav-dropdown">           
                 { kerSrb?.map((kernel, idx) => {   
                 return  <NavItem key={idx} >
                             <NavLink eventKey={idx} title={kernel.name}>{kernel.name}</NavLink>

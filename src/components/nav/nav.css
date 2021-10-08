@@ -11,8 +11,8 @@
     display: block;
 }
 @media (max-width: 850px) {
-    .btn{
-        width:max-content
+    .btn-nav{
+        width:100vw;
     }
 }
 
