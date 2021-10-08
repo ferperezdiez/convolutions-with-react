@@ -4,6 +4,7 @@ import Kernels from "../../Kernels/kernels";
 import Sobel from "../../Sobel/sobel";
 import { addSobel, changeIndex, changeKernel } from "../../redux/actions";
 import { NavDropdown, NavItem, NavLink } from "react-bootstrap";
+import './selectFilter.css';
 
 
 export default function SelectFilter(){
@@ -20,7 +21,7 @@ export default function SelectFilter(){
 
     return ( 
       
-            <NavDropdown onSelect={clicked} title="Select a filter" id="basic-nav-dropdown">           
+            <NavDropdown className="btn btn-success"  onSelect={clicked} title="Select a filter" id="basic-nav-dropdown">           
                 { kerSrb?.map((kernel, idx) => {   
                 return  <NavItem key={idx} >
                             <NavLink eventKey={idx} title={kernel.name}>{kernel.name}</NavLink>

@@ -1,4 +1,4 @@
-import { Button, Container, Navbar } from 'react-bootstrap';
+import {Container, Navbar } from 'react-bootstrap';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SelectFilter from '../selectFilter/selectFilter';
@@ -22,7 +22,7 @@ export default function Nav(){
                             <div className={width > 850 ?"divLnks row container-fluid" : "block"}>
                                 <div className="col">
                                     <Link to="/upload" className="link">
-                                        <button className="btn btn-primary" >Try with another image</button>
+                                        <button className="btn btn-primary" >Try with an image</button>
                                     </Link>
                                 </div>
                                 <div className="col ">

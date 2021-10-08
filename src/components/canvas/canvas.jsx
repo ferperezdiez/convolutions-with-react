@@ -36,6 +36,7 @@ function Canvas(){
     useEffect(()=>{
         if(image && canvas && result){
             blackAndWhite(canvas)
+           
         }
     })
 
