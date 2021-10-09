@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 export default function SendResume(){
     const [mail, setMail] = useState({})
-
+    const userLang = navigator.language || navigator.userLanguage; 
+    
     const setmail = (e) => {
         setMail({mail: e.target.value})
     }
@@ -36,6 +37,7 @@ export default function SendResume(){
                         <button className="btn btn-primary">BACK</button>
                     </Link>
             </div>
+            {userLang}
         </div>
         )
 }
