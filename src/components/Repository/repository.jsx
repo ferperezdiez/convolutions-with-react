@@ -39,8 +39,8 @@ export default function Repository(){
         <>
         <div className="repositoryLink">
             <a href="https://github.com/ferperezdiez/convolutions-with-react" 
-                className="btn btn-primary btn-lg repoButton">
-                    {userLang === 'en' ? 'REPOSITORY' : 'REPOSITORIO'}
+                className="btn btn-success btn-lg repoButton">
+                    {userLang === 'en' ? 'VIEW THE REPOSITORY' : 'VER REPOSITORIO'}
                 </a>
         </div>
         <div className="repositoryContainer">

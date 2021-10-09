@@ -26,9 +26,13 @@
 }
 
 .divLnks{
-    width: 70% !important;
+    width: 100% !important;
 }
 
 .try{
     height: 20px;
+}
+
+.navBar{
+    padding-bottom: 1.5rem;
 }
