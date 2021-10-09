@@ -8,31 +8,24 @@ import './video.css'
 
 
 export default function Video(){
-    //const [onOff, setOnOff] = useState(true)
     
-    const webRef = useRef()
     const dispatch = useDispatch()
-
+    const videoRef = useRef()
+    
     const videoConstraints = {
         facingMode: "user"
       };
 
     const screenShot = () => {
-        let img = webRef.current.getScreenshot()
-        
+        let img = videoRef.current.getScreenshot()
         dispatch(addFile(null))
         dispatch(addImage(img))
-        //setOnOff(false)
     }
-  
-    // const turn = () => {
-    //     setOnOff(!onOff)
-    // }
-   
+
     return(
-       <div >
+        <div >
            <div className="videoContainer">
-               <Webcam className="img-fluid video" ref={webRef} 
+               <Webcam className="img-fluid video" ref={videoRef} 
                     videoConstraints={videoConstraints}/>
                 <Link className="buttonVideo" to="/">
                     <button className="btn btn-primary " onClick={screenShot}>ScreenShot</button>
@@ -40,10 +33,9 @@ export default function Video(){
            </div>
            <div className="videoContainer">
                 <Link to="/"className="buttonVideo2">
-                        <button className="btn btn-primary ">volver</button>
+                        <button className="btn btn-primary ">BACK</button>
                 </Link>                
             </div>
-
        </div>
         
     )

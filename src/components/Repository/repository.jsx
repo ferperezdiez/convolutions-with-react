@@ -39,22 +39,22 @@ export default function Repository(){
                 className="btn btn-primary btn-lg repoButton">repository</a>
         </div>
         <div className="repositoryContainer">
-            <label className="form-label repositoryLabel blockquote text-center" >Si tienes alguna sugerencia sobre el código y quieres compartila 
-                conmigo, te agradeceré mucho si me lo comentas aquí abajo, ya que me ayuda
-                a mejorar!
+            <label className="form-label repositoryLabel blockquote text-center" >If you have any 
+                suggestions about the code and you want to share it with me, I'll be very grateful 
+                if you tell me about it below, it helps me to me to improve!
             </label>
                 <form className="mb-3 justify" onSubmit={onSubmit}>
-                    <label className="form-label labelFormRepo margin">Puedes ingresar tu correo aquí(opcional)</label>
+                    <label className="form-label labelFormRepo margin">Email address(optional)</label>
                     <input className="form-control" name="mail" value={suggestion.mail}
                          onChange={onChange}  type="text" />
-                    <label className="form-label labelFormRepo margin">Puedes ingresar tu comentario aquí</label>      
+                    <label className="form-label labelFormRepo margin">You can enter your suggestion here</label>      
                     <textarea className="form-control" name="text" value={suggestion.text}
                          onChange={onChange}/>
-                    <button className="btn btn-secondary reposirySend">send</button>
+                    <button className="btn btn-secondary reposirySend">SEND</button>
                 </form>
         </div>
             <Link to='/' className="repositoryLink2">
-                <buttom className="btn btn-primary repoBack margin" >volver</buttom>
+                <buttom className="btn btn-primary repoBack margin" >BACK</buttom>
             </Link>
         </>
     )

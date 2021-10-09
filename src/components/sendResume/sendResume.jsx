@@ -26,13 +26,14 @@ export default function SendResume(){
     return (
         <div className="senmMailContainer">
             <div className="divInput">
-                <h5>Ingresa tu email para recibir mi CV</h5>
+                <h5 className="h5Resume">Would you like to receive my resume? </h5>
+                <h5>Please, enter your email address below</h5>
                 <form className="input-group mb-3 form" onSubmit={sendmail}>
                     <input className="form-control" onChange={setmail}/>
-                    <button className="btn btn-primary">enviar</button>
+                    <button className="btn btn-primary">SEND</button>
                 </form>
                     <Link to='/'>
-                        <button className="btn btn-primary">volver</button>
+                        <button className="btn btn-primary">BACK</button>
                     </Link>
             </div>
         </div>

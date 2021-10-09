@@ -114,7 +114,7 @@ const Kernels = [
             ],
          divider: 1,
         posNeg: 1,
-       name: 'no se el nombre' 
+       name: 'Límites definidos' 
     },
     {
         kernel: [
@@ -124,7 +124,7 @@ const Kernels = [
             ],
          divider: 3,
         posNeg: 1,
-       name: 'mmm' 
+       name: 'darken' 
     },
 ];
 

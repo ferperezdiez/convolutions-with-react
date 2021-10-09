@@ -6,6 +6,11 @@
     align-items: center;
     margin-left: 30%;
     margin-top: 20%;
+    
+}
+
+.h5Resume{
+    text-align: center;
 }
 
 @media(max-width:850px){

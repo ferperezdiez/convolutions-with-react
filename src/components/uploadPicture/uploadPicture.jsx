@@ -37,12 +37,12 @@ export default function UploadPic(){
                     <form encType="upLoadForm multipart/form-data" className="uploadForm"
                         onSubmit={(e) => upload(e)}>
                         <input className="form-control margin" id="formFileMultiple" type="file" onChange={selectFile} /> 
-                        <button className="upLoadButton btn btn-primary margin">enviar</button>    
+                        <button className="upLoadButton btn btn-primary margin">SEND</button>    
                     </form>
                 </div>
                 <div className="uploadLink">
                      <Link to="/" >
-                    <button className=" btn btn-primary margin2">volver</button> 
+                    <button className=" btn btn-primary margin2">BACK</button> 
                     </Link>
                 </div>
           </>
