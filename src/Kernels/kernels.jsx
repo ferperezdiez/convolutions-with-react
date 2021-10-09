@@ -1,5 +1,6 @@
 
-
+let userLang = navigator.language || navigator.userLanguage; 
+userLang = userLang.split('').splice(0,2).join('')
 
 const Kernels = [
     {
@@ -22,7 +23,7 @@ const Kernels = [
         ],
         divider: 256,
         posNeg: -1,
-        name: 'máscara de desenfoque 5x5'
+        name: userLang === 'es' ? 'máscara de desenfoque 5x5' : 'blur mask 5x5'
     }, 
     {
         kernel: [
@@ -34,7 +35,7 @@ const Kernels = [
         ],
         divider: 256,
         posNeg: 1,
-        name: 'defensoque gaussiano'
+        name: userLang === 'es' ? 'defensoque gaussiano' : 'Gaussian blur'
     },
     {
         kernel: [
@@ -44,7 +45,7 @@ const Kernels = [
         ],
         divider: 1,
         posNeg: 1,
-        name: 'detección de bordes (I)'
+        name: userLang === 'es' ? 'detección de bordes (I)' : 'border detection (I)'
     },
     {
         kernel: [
@@ -54,7 +55,7 @@ const Kernels = [
             ],
         divider: 1,
         posNeg: 1,
-        name: 'detección de bordes (II)'   
+        name: userLang === 'es' ? 'detección de bordes (II)' : 'border detection (II)'  
     },
     {
         kernel: [
@@ -64,7 +65,7 @@ const Kernels = [
             ],
         divider: 1,
         posNeg: 1,
-        name: 'detección de bordes (III)'
+        name: userLang === 'es' ? 'detección de bordes (III)' : 'border detection (III)'
     },
     {
         kernel: [
@@ -84,7 +85,7 @@ const Kernels = [
             ],
         divider: 9,
         posNeg: 1,
-        name: 'desenfoque de cuadro'
+        name: userLang === 'es' ? 'desenfoque de cuadro' : 'frame blur'
     },
     {
         kernel: [
@@ -94,7 +95,7 @@ const Kernels = [
             ],
         divider: 5,
         posNeg: -1,
-        name: 'lighting' 
+        name: userLang === 'en' ? 'lighting' : 'iluminación'
     },
     {
         kernel: [
@@ -104,7 +105,7 @@ const Kernels = [
             ],
          divider: 1,
         posNeg: 1,
-       name: 'sharper' 
+       name: userLang === 'en' ? 'sharper' : 'nitidez' 
     },
     {
         kernel: [
@@ -114,7 +115,7 @@ const Kernels = [
             ],
          divider: 1,
         posNeg: 1,
-       name: 'Límites definidos' 
+       name: userLang === 'es' ? 'Límites definidos' : 'sharp border'
     },
     {
         kernel: [
@@ -124,7 +125,7 @@ const Kernels = [
             ],
          divider: 3,
         posNeg: 1,
-       name: 'darken' 
+       name: userLang === 'en' ? 'darken' : 'oscurecer'
     },
 ];
 

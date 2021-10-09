@@ -8,7 +8,9 @@ import './selectFilter.css';
 
 
 export default function SelectFilter(){
-    
+
+    let userLang = navigator.language || navigator.userLanguage; 
+    userLang = userLang.split('').splice(0,2).join('')
     const kerSrb = [...Kernels, ...Sobel]
     const dispatch = useDispatch()
     function clicked(i){   
@@ -22,11 +24,13 @@ export default function SelectFilter(){
     return ( 
       
             <NavDropdown className="btn btn-success btn-nav"  
-            onSelect={clicked} title="Select a filter" id="basic-nav-dropdown">           
-                { kerSrb?.map((kernel, idx) => {   
-                return  <NavItem key={idx} >
-                            <NavLink eventKey={idx} title={kernel.name}>{kernel.name}</NavLink>
-                        </NavItem> })}            
+                onSelect={clicked} title={ userLang === 'en' ? "Select a filter" : 
+                "Selecciona un filtro"} id="basic-nav-dropdown">           
+                    { kerSrb?.map((kernel, idx) => {   
+                    return  <NavItem key={idx} >
+                                <NavLink eventKey={idx} title={kernel.name}>
+                                    {kernel.name}</NavLink>
+                            </NavItem> })}            
             </NavDropdown>
       
     )

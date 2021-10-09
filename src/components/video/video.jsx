@@ -9,6 +9,8 @@ import './video.css'
 
 export default function Video(){
     
+    let userLang = navigator.language || navigator.userLanguage; 
+    userLang = userLang.split('').splice(0,2).join('')
     const dispatch = useDispatch()
     const videoRef = useRef()
     
@@ -33,7 +35,8 @@ export default function Video(){
            </div>
            <div className="videoContainer">
                 <Link to="/"className="buttonVideo2">
-                        <button className="btn btn-primary ">BACK</button>
+                        <button className="btn btn-primary ">
+                            {userLang === 'en' ? 'BACK' : 'VOLVER'}</button>
                 </Link>                
             </div>
        </div>

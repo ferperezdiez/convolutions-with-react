@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 export default function SendResume(){
     const [mail, setMail] = useState({})
-    const userLang = navigator.language || navigator.userLanguage; 
-    
+    let userLang = navigator.language || navigator.userLanguage; 
+    userLang = userLang.split('').splice(0,2).join('')
     const setmail = (e) => {
         setMail({mail: e.target.value})
     }
@@ -27,17 +27,22 @@ export default function SendResume(){
     return (
         <div className="senmMailContainer">
             <div className="divInput">
-                <h5 className="h5Resume">Would you like to receive my resume? </h5>
-                <h5>Please, enter your email address below</h5>
+                <h5 className="h5Resume">
+                    {userLang === 'en' ? 'Would you like to receive my resume?' :
+                     'Deseas recibir mi CV?'}</h5>
+                <h5>{userLang === 'en' ? 'Please, enter your email address below':
+                'Por favor ingresa tu correo electrónico aquí debajo'}</h5>
                 <form className="input-group mb-3 form" onSubmit={sendmail}>
                     <input className="form-control" onChange={setmail}/>
-                    <button className="btn btn-primary">SEND</button>
+                    <button className="btn btn-primary">
+                        { userLang === 'en' ? 'SEND' : 'ENVIAR'}</button>
                 </form>
                     <Link to='/'>
-                        <button className="btn btn-primary">BACK</button>
+                        <button className="btn btn-primary">
+                            { userLang === 'en' ? 'BACK' : 'VOLVER'}</button>
                     </Link>
             </div>
-            {userLang}
+            
         </div>
         )
 }
