@@ -2,23 +2,20 @@
     padding: 0;
     list-style-type: none;
     display: flex;
-    
-    
+    margin:0 auto 0;
 }
+
 .bd-highlight{
     margin:0px
 }
+
 .navbar-collapse .collapse{
-    width: 100%;
+    width: 100vw;
 }
-
-
-
 
 .nav{
     height: 15%;
 }
-
 
 .col{
     margin-top: 1rem;
@@ -27,6 +24,7 @@
 .block{
     display: block;
 }
+
 @media (max-width: 850px) {
     .btn-nav{
         width:100vw;
@@ -34,8 +32,7 @@
     .ulNav{
         list-style: none;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
 }
 

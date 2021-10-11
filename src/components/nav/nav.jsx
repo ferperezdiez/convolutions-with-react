@@ -4,18 +4,16 @@ import { Link } from 'react-router-dom';
 import SelectFilter from '../selectFilter/selectFilter';
 import './nav.css'
 
-
 export default function Nav(){
 
-    
     let userLang = navigator.language || navigator.userLanguage; 
     userLang = userLang.split('').splice(0,2).join('')
   
     return (
         
-        <Navbar bg="light" expand="lg" >
-                <Container className="d-inline-flex p-2 bd-highlight">
-                <Navbar.Toggle aria-controls="row row-cols-lg-5 g-2 g-lg-3 basic-navbar-nav" />
+    <Navbar bg="light" expand="lg" >
+        <Container className="d-inline-flex p-2 bd-highlight">
+            <Navbar.Toggle aria-controls="row row-cols-lg-5 g-2 g-lg-3 basic-navbar-nav" />
                 <Navbar.Collapse className="navbar-collapse collapse" >
                             <ul className="ulNav">
                                 <li>
@@ -59,7 +57,6 @@ export default function Nav(){
                             </ul>
                 </Navbar.Collapse>
             </Container>
-          
         </Navbar>
     )
 }
