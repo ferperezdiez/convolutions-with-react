@@ -14,7 +14,7 @@ export default function Nav(){
     <Navbar bg="light" expand="lg" >
         <Container className="d-inline-flex p-2 bd-highlight">
             <Navbar.Toggle aria-controls="row row-cols-lg-5 g-2 g-lg-3 basic-navbar-nav" />
-                <Navbar.Collapse className="navbar-collapse collapse" >
+                <Navbar.Collapse className="navbar-collapse collapse collap" >
                             <ul className="ulNav">
                                 <li className="liNav">
                                     <SelectFilter />
