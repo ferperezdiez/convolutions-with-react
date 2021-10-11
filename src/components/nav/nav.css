@@ -20,9 +20,6 @@
 .bd-highlight{
     margin:0px
 }
-
-
-
 .nav{
     height: 15%;
 }
@@ -36,14 +33,27 @@
 }
 
 @media (max-width: 850px) {
+    
     .btn-nav{
-        width:100vw;
+        width:100%;
     }
     .ulNav{
         list-style: none;
         display: flex;
         flex-direction: column; 
     }
+    .liNav{
+        margin-top: .4rem;
+    }
+
+    .headerNav{
+    margin: 0 auto 0;
+    padding: 0;
+    width: 100%;
+    padding:0;
+    }
+
+    
 }
 
 .repositoryNav{
