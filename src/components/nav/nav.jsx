@@ -16,38 +16,38 @@ export default function Nav(){
             <Navbar.Toggle aria-controls="row row-cols-lg-5 g-2 g-lg-3 basic-navbar-nav" />
                 <Navbar.Collapse className="navbar-collapse collapse" >
                             <ul className="ulNav">
-                                <li>
+                                <li className="liNav">
                                     <SelectFilter />
                                 </li>
-                                <li>
+                                <li className="liNav">
                                     <Link to="/upload" className="link">
                                         <button className="btn btn-primary btn-nav" >
                                             { userLang === 'en' ? 'Try with an image' : 
                                             'Prueba con otra imagen'}</button>
                                     </Link>
                                 </li>
-                                <li>
+                                <li className="liNav">
                                     <Link to="/video">
                                         <button className="btn btn-primary btn-nav">
                                             { userLang === 'en' ? 'Try with a selfie' :
                                             'Prueba con una selfie'}</button>
                                     </Link>
                                 </li>
-                                <li>
+                                <li className="liNav">
                                     <a href="https://api.whatsapp.com/send?phone=542215952135" 
                                         className="btn btn-primary btn-nav">
                                             
                                         {userLang === 'en' ? 'Contact me' : 'Contactarme'}
                                     </a>
                                 </li>
-                                <li>
+                                <li className="liNav">
                                     <Link to="/repository">
                                         <button className="btn btn-primary btn-nav">
                                             { userLang === 'en' ? 'Repository' : 
                                             'Repositorio'}</button>
                                     </Link>
                                 </li>
-                                <li>
+                                <li className="liNav">
                                     <Link to="/resume">
                                         <button className="btn btn-primary btn-nav">
                                             { userLang === 'en' ? 'Get my resume' : 
