@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import SelectFilter from '../selectFilter/selectFilter';
 import './nav.css'
 
+
 export default function Nav(){
 
     var width = window.innerWidth
@@ -15,52 +16,47 @@ export default function Nav(){
         <Navbar bg="light" expand="lg" >
                 <Container className="d-inline-flex p-2 bd-highlight">
                 <Navbar.Toggle aria-controls="row row-cols-lg-5 g-2 g-lg-3 basic-navbar-nav" />
-                <Navbar.Collapse >
-                            <div className={width > 850 ?"row container-fluid divSelect" : 
-                            "block"}>
-                                <div className="col">
+                <Navbar.Collapse className="navbar-collapse collapse" >
+                            <ul className="ulNav">
+                                <li>
                                     <SelectFilter />
-                                </div>
-                            </div>
-                            <div className={width > 850 ?" row container-fluid divLnks" : 
-                            "block"}>
-                                <div className="col">
+                                </li>
+                                <li>
                                     <Link to="/upload" className="link">
                                         <button className="btn btn-primary btn-nav" >
                                             { userLang === 'en' ? 'Try with an image' : 
                                             'Prueba con otra imagen'}</button>
                                     </Link>
-                                </div>
-                                <div className="col ">
+                                </li>
+                                <li>
                                     <Link to="/video">
                                         <button className="btn btn-primary btn-nav">
                                             { userLang === 'en' ? 'Try with a selfie' :
                                             'Prueba con una selfie'}</button>
                                     </Link>
-                                </div>
-                                <div className="col">
-                                    <a href="https://api.whatsapp.com/send?phone=542215952135&text=desde%20la%20web" 
+                                </li>
+                                <li>
+                                    <a href="https://api.whatsapp.com/send?phone=542215952135" 
                                         className="btn btn-primary btn-nav">
-                                           
-                                        {userLang === 'en' ? 'Contact me' : 'Contacto'}
+                                            
+                                        {userLang === 'en' ? 'Contact me' : 'Contactarme'}
                                     </a>
-                                </div>
-                                <div className="col">
+                                </li>
+                                <li>
                                     <Link to="/repository">
                                         <button className="btn btn-primary btn-nav">
                                             { userLang === 'en' ? 'Repository' : 
                                             'Repositorio'}</button>
                                     </Link>
-                                </div>
-                                <div className="col">
+                                </li>
+                                <li>
                                     <Link to="/resume">
                                         <button className="btn btn-primary btn-nav">
                                             { userLang === 'en' ? 'Get my resume' : 
                                             'Obtén mi CV'}</button>
                                     </Link>
-                                </div >
-                            </div>
-              
+                                </li>
+                            </ul>
                 </Navbar.Collapse>
             </Container>
           

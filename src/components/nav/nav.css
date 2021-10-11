@@ -1,3 +1,20 @@
+.ulNav{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    
+    
+}
+.bd-highlight{
+    margin:0px
+}
+.navbar-collapse .collapse{
+    width: 100%;
+}
+
+
+
+
 .nav{
     height: 15%;
 }
@@ -13,6 +30,12 @@
 @media (max-width: 850px) {
     .btn-nav{
         width:100vw;
+    }
+    .ulNav{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        
     }
 }
 
@@ -36,3 +59,14 @@
 .navBar{
     padding-bottom: 1.5rem;
 }
+
+.prueba{
+    color: blanchedalmond;
+}
+
+.navContainer{
+    padding: 0px;
+}
+
+
+

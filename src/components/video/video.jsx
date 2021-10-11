@@ -8,7 +8,7 @@ import './video.css'
 
 
 export default function Video(){
-    
+
     let userLang = navigator.language || navigator.userLanguage; 
     userLang = userLang.split('').splice(0,2).join('')
     const dispatch = useDispatch()

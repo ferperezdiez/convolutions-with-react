@@ -11,6 +11,7 @@
 
 .h5Resume{
     text-align: center;
+    font-style: italic;
 }
 
 @media(max-width:850px){
