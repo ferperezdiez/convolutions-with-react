@@ -7,7 +7,7 @@ import './nav.css'
 
 export default function Nav(){
 
-    var width = window.innerWidth
+    
     let userLang = navigator.language || navigator.userLanguage; 
     userLang = userLang.split('').splice(0,2).join('')
   
