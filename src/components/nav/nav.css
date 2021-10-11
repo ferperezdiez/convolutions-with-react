@@ -14,7 +14,7 @@
 }
 
 .navbar-collapse .collapse{
-    width: 100vw;
+    max-width: 100%;
 }
 
 .nav{
