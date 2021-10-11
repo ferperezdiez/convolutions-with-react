@@ -9,11 +9,19 @@
     padding: 0px 4px 0px 0px ;
 }
 
+.headerNav{
+    margin: 0 auto 0;
+    padding: 0;
+    width: 100%;
+}
+
 .bd-highlight{
     margin:0px
 }
 
+.d-inline-flex .p-2 .bd-highligh{
 
+}
 
 .nav{
     height: 15%;
