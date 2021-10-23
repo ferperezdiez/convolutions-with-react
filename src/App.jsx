@@ -5,6 +5,7 @@ import Video from "./components/video/video.jsx";
 import UploadPic from "./components/uploadPicture/uploadPicture.jsx";
 import SendResume from "./components/sendResume/sendResume.jsx";
 import Repository from "./components/Repository/repository.jsx";
+import Streaming from "./components/streaming/Streaming.js";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route exact path="/video" component={Video}/>
       <Route exact path="/resume" component={SendResume}/>
       <Route exact path="/repository" component={Repository}/>
+      <Route exact path="/streaming" component={Streaming}/>
     </div>
   );
 }
