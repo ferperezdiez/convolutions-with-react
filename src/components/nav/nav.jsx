@@ -54,13 +54,6 @@ export default function Nav(){
                                             'Obtén mi CV'}</button>
                                     </Link>
                                 </li>
-                                <li className="liNav">
-                                    <Link to="/streaming">
-                                        <button className="btn btn-primary btn-nav">
-                                            { userLang === 'en' ? 'Try with video' : 
-                                            'Intenta con video'}</button>
-                                    </Link>
-                                </li>
                             </ul>
                 </Navbar.Collapse>
             </Container>

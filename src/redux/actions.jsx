@@ -1,4 +1,4 @@
-import { ADD_FILE, ADD_IMAGE, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName";
+import { ADD_FILE, ADD_IMAGE, ADD_NAME, ADD_SOBEL, CHANGE_INDEX, CHANGE_KERNEL } from "./actionsName";
 
 export function changeIndex (index){
     return (dispatch) => {
@@ -23,6 +23,15 @@ export function addSobel (sobel){
         dispatch({
             type: ADD_SOBEL,
             payload: sobel
+        })
+    }
+}
+
+export function changeName (name){
+    return (dispatch) => {
+        dispatch({
+            type: ADD_NAME,
+            payload: name
         })
     }
 }
